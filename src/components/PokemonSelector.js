@@ -1,12 +1,12 @@
 import React from 'react';
 
 const PokemonSelector = (props) => {
+  let options = ""
   console.log("props:", props);
   if (props.allPokemon.results){
-    const options = props.allPokemon.results.map((pokemon, index) => {
+    options = props.allPokemon.results.map((pokemon, index) => {
       return <option value={index} key={index}>{pokemon.name}</option>
     })
-    console.log(options);
   }
 
   function handleChange(event){
@@ -16,7 +16,7 @@ const PokemonSelector = (props) => {
   return (
     <select id="Pokemon-selector" defaultValue="default" onChange={handleChange}>
       <option disabled value="default">Choose a Pokemon...</option>
-      {options.props.children}
+      {options}
     </select>
   )
 }
