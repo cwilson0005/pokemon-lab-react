@@ -1,10 +1,11 @@
 import React from 'react';
 
-const PokemonDetail = ({pokemon}) => {
-  if (!pokemon) return null;
+const PokemonDetail = (props) => {
+  console.log("PokemonDetail:", props.currentPokemon);
+  if (!props.currentPokemon) return null;
   return (
     <h3>
-      {pokemon.name}
+      {props.currentPokemon.name}
     </h3>
   )
 }

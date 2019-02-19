@@ -39,7 +39,7 @@ class PokemonBox extends Component {
         <h2>Pokemon Container</h2>
         <PokemonSelector
           allPokemon={this.state.allPokemon} handlePokemonSelected={this.handlePokemonSelected}/>
-        <PokemonDetail country={this.state.currentPokemon}/>
+        <PokemonDetail currentPokemon={this.state.currentPokemon}/>
       </div>
     );
   }
