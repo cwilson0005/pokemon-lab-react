@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import PokemonSelector from '../components/PokemonSelector';
 import PokemonDetail from '../components/PokemonDetail';
 
