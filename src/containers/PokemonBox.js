@@ -9,6 +9,7 @@ class PokemonBox extends Component {
       allPokemon: [],
       selectedPokemon: null
     };
+    this.handlePokemonSelected = this.handlePokemonSelected.bind(this);
   }
 
   componentDidMount(){
@@ -27,11 +28,12 @@ class PokemonBox extends Component {
   }
 
   handlePokemonSelected(index){
-    const selectedPokemon = this.state.allPokemon[index];
+    const selectedPokemon = this.state.allPokemon.results[index];
     this.setState({currentPokemon: selectedPokemon})
   }
 
   render(){
+    console.log("handling pokemon", this.state.allPokemon.results);
     return (
       <div>
         <h2>Pokemon Container</h2>
